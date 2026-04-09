@@ -2,8 +2,9 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const pinoLogger = require('./logger');
+//const pinoLogger = require('./logger');
 const logger = require('./logger');
+const pinoHttp = require('pino-http');
 
 const connectToDatabase = require('./models/db');
 const {loadData} = require("./util/import-mongo/index");
