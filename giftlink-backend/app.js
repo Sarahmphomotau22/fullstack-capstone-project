@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const pinoLogger = require('./logger');
+const logger = require('./logger');
 
 const connectToDatabase = require('./models/db');
 const {loadData} = require("./util/import-mongo/index");
@@ -24,8 +25,8 @@ app.use(express.json());
 // Route files
 
 const authRoutes = require('./routes/authRoutes');
-const pinoHttp = require('pino-http');
-const logger = require('./logger');
+//const pinoHttp = require('pino-http');
+//const logger = require('./logger');
 app.use(pinoHttp({ logger }));
 
 // Gift API Task 1: import the giftRoutes and store in a constant called giftRoutes
@@ -36,7 +37,7 @@ const searchRoutes = require('./routes/searchRoutes');
 
 
 //const pinoHttp = require('pino-http');
-//const logger = require('./logger');
+
 
 //app.use(pinoHttp({ logger }));
 
