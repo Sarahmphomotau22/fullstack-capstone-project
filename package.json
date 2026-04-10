@@ -1,3 +1,9 @@
+"scripts": {
+  "start": "react-scripts start",
+  "build": "react-scripts build"
+}
+
+
 {
   "dependencies": {
     "jshint": "^2.13.6"
